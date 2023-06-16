@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multiple Dropdowns</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <style>
+      body {
+        background-image: url("./static/img/1596.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <nav>
+          <div class="brand">
+            <a href="#">
+              <img src="./static/img/logo.png" alt="" />
+            </a>
+          </div>
+          <!-- <div class="nav-right">
+            <div class="nav-links">
+              <a href="#" class="active">Home</a>
+              <a href="#">About</a>
+              <a href="#">Updates</a>
+              <a href="#">Career</a>
+              <a href="#">Shop</a>
+            </div>
+            <div class="search">
+              <div>
+                <img src="./img/search.png" alt="" />
+                <input type="text" placeholder="Search" />
+              </div>
+            </div>
+          </div> -->
+        </nav>
+        <section class="hero">
+          <div class="cta container">
+            <div class="left-section">
+              <div class="descrip">
+                <h1 style="color: white">
+                  Get all your spacecraft information with our website!
+                </h1>
+              </div>
+              <div>
+                <h1>Enter your query</h1>
+                <form method="POST">
+                  <label for="question" style="color: white">Question :</label>
+                  <input
+                    type="text"
+                    id="question"
+                    name="question"
+                    required
+                  /><br />
+                  <div class="container">
+                    <div class="center">
+                      <input type="submit" value="Generate Result" />
+                    </div>
+                  </div>
+                </form>
+                {% if answer %}
+                <h2 style="color: white">Top Result:</h2>
+                <p style="color: white">{{ answer }}</p>
+                {% endif %}
+              </div>
+              <!-- <div class="col text-center">
+                <button class="btn btn-default">Centered button</button>
+              </div> -->
+              <!-- <button class="btn btn-primary">Explore Space</button> -->
+            </div>
+            <div class="right-section">
+              <img src="./static/img/astronaut.png" alt="astronaut" />
+            </div>
+          </div>
+        </section>
+      </header>
+    </div>
+  </body>
+</html>
